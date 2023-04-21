@@ -25,7 +25,7 @@ build1:
   stage: build
   script:
     - echo "Do your build here"
-    - apt update && apt -y  install wget  libstdc++6  build-essential
+    - apt update && apt -y  install wget  unzip  libstdc++6  build-essential
     - wget https://github.com/ericwa/ericw-tools/releases/download/v0.18.1/ericw-tools-v0.18.1-Linux.zip
     - unzip ericw-tools-v0.18.1-Linux.zip
     - ./ericw-tools-v0.18.1-Linux/bin/qbsp m1central.map
