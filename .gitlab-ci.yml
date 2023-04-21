@@ -34,5 +34,5 @@ build1:
     - unzip start.zip
     - ./ericw-tools-v0.18.1-Linux/bin/qbsp m1central.map
     - artifacts:
-      paths:
-      - m1central.bsp
+          paths:
+              - m1central.bsp
