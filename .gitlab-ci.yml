@@ -35,4 +35,4 @@ build1:
     - ./ericw-tools-v0.18.1-Linux/bin/qbsp m1central.map
     - artifacts:
       paths:
-      - m1ce tral.bs
+      - m1central.bsp
