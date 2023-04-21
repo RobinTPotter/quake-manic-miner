@@ -33,8 +33,11 @@ build1:
     - wget https://www.quaddicted.com/files/wads/start.zip
     - unzip start.zip
     - ls *map | while read m; do ./ericw-tools-v0.18.1-Linux/bin/qbsp $m; done
+    - ls -hl
     - ls *bsp | while read m; do ./ericw-tools-v0.18.1-Linux/bin/vis $m; done
+    - ls -hl
     - ls *bsp | while read m; do ./ericw-tools-v0.18.1-Linux/bin/light -soft -extra4 $m; done
+    - ls -hl
   artifacts:
       paths:
           - ./*.bsp
