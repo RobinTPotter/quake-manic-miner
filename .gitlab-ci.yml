@@ -28,4 +28,8 @@ build1:
     - apt update && apt -y  install wget  unzip  libstdc++6  build-essential
     - wget https://github.com/ericwa/ericw-tools/releases/download/v0.18.1/ericw-tools-v0.18.1-Linux.zip
     - unzip ericw-tools-v0.18.1-Linux.zip
+    - wget https://www.quaddicted.com/files/wads/quakewad.zip
+    - unzip quakewad.zip
+    - wget https://www.quaddicted.com/files/wads/start.zip
+    - unzip start.zip
     - ./ericw-tools-v0.18.1-Linux/bin/qbsp m1central.map
