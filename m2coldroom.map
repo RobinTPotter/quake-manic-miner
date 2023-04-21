@@ -3,7 +3,7 @@
 // entity 0
 {
 "classname" "worldspawn"
-"wad" "/home/robin/quake/wads/robin.wad;/home/robin/quake/wads/START.WAD;/home/robin/quake/wads/QUAKE101.WAD"
+"wad" "robin.wad;START.WAD;QUAKE101.WAD"
 // brush 0
 {
 ( 48 -40 864 ) ( 48 -32 968 ) ( 48 -32 976 ) fridge1 -0 -0 180 1 -1
