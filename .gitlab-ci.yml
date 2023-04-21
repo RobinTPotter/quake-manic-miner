@@ -10,7 +10,7 @@
 # See https://docs.gitlab.com/ee/ci/yaml/index.html for all available options
 
 # you can delete this line if you're not using Docker
-image: busybox:latest
+image: ubuntu:latest
 
 before_script:
   - echo "Before script section"
@@ -25,7 +25,7 @@ build1:
   stage: build
   script:
     - echo "Do your build here"
-    - apk update && apk add wget libstdc++ build-essential
+    - apt update && apt install wget libstdc++ build-essential
     - wget https://github.com/ericwa/ericw-tools/releases/download/v0.18.1/ericw-tools-v0.18.1-Linux.zip
     - unzip ericw-tools-v0.18.1-Linux.zip
     - ./ericw-tools-v0.18.1-Linux/bin/qbsp m1central.map
