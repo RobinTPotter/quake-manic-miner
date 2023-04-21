@@ -37,5 +37,5 @@ build1:
     - ls *bsp | while read m; do ./ericw-tools-v0.18.1-Linux/bin/light -soft -extra4 $m; done
   artifacts:
       paths:
-          - *.bsp
-          - *.lit
+          - ./*.bsp
+          - ./*.lit
