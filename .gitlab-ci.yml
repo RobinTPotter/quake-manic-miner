@@ -33,3 +33,6 @@ build1:
     - wget https://www.quaddicted.com/files/wads/start.zip
     - unzip start.zip
     - ./ericw-tools-v0.18.1-Linux/bin/qbsp m1central.map
+    - artifacts:
+      paths:
+      - m1ce tral.bs
