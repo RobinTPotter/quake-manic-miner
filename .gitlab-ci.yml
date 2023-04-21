@@ -32,7 +32,10 @@ build1:
     - unzip quakewad.zip
     - wget https://www.quaddicted.com/files/wads/start.zip
     - unzip start.zip
-    - ./ericw-tools-v0.18.1-Linux/bin/qbsp m1central.map
+    - ls *map | while read m; do ./ericw-tools-v0.18.1-Linux/bin/qbsp $m; done
+    - ls *bsp | while read m; do ./ericw-tools-v0.18.1-Linux/bin/vis $m; done
+    - ls *bsp | while read m; do ./ericw-tools-v0.18.1-Linux/bin/light -soft -extra4 $m; done
   artifacts:
       paths:
-          - m1central.bsp
+          - *.bsp
+          - *.lit
