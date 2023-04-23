@@ -3,7 +3,7 @@
 // entity 0
 {
 "classname" "worldspawn"
-"wad" "/home/robin/quake/wads/QUAKE101.WAD"
+"wad" "QUAKE101.WAD"
 "message" "central cavern"
 "sounds" "2"
 // brush 0

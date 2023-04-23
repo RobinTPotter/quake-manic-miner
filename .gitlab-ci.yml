@@ -1,0 +1,44 @@
+# This file is a template, and might need editing before it works on your project.
+# You can copy and paste this template into a new `.gitlab-ci.yml` file.
+# You should not add this template to an existing `.gitlab-ci.yml` file by using the `include:` keyword.
+#
+# To contribute improvements to CI/CD templates, please follow the Development guide at:
+# https://docs.gitlab.com/ee/development/cicd/templates.html
+# This specific template is located at:
+# https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Bash.gitlab-ci.yml
+
+# See https://docs.gitlab.com/ee/ci/yaml/index.html for all available options
+
+# you can delete this line if you're not using Docker
+image: ubuntu:latest
+
+before_script:
+  - echo "Before script section"
+  - echo "For example you might run an update here or install a build dependency"
+  - echo "Or perhaps you might print out some debugging details"
+
+after_script:
+  - echo "After script section"
+  - echo "For example you might do some cleanup here"
+
+build1:
+  stage: build
+  script:
+    - echo "Do your build here"
+    - apt update && apt -y  install wget  unzip  libstdc++6  build-essential
+    - wget https://github.com/ericwa/ericw-tools/releases/download/v0.18.1/ericw-tools-v0.18.1-Linux.zip
+    - unzip ericw-tools-v0.18.1-Linux.zip
+    - wget https://www.quaddicted.com/files/wads/quakewad.zip
+    - unzip quakewad.zip
+    - wget https://www.quaddicted.com/files/wads/start.zip
+    - unzip start.zip
+    - ls *map | while read m; do ./ericw-tools-v0.18.1-Linux/bin/qbsp $m; done
+    - ls -hl
+    - ls *bsp | while read m; do if [ -e $(echo $m | sed 's#\.bsp*$#.prt#') ]; then ./ericw-tools-v0.18.1-Linux/bin/vis $m; fi; done
+    - ls -hl
+    - ls *bsp | while read m; do ./ericw-tools-v0.18.1-Linux/bin/light -soft -extra4 $m; done
+    - ls -hl
+  artifacts:
+      paths:
+          - ./*.bsp
+          - ./*.lit

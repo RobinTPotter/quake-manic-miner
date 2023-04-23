@@ -3,7 +3,7 @@
 // entity 0
 {
 "classname" "worldspawn"
-"wad" "/home/robin/quake/wads/START.WAD;/home/robin/quake/wads/QUAKE101.WAD;robin.wad"
+"wad" "robin.wad;START.WAD;QUAKE101.WAD"
 // brush 0
 {
 ( 48 -40 864 ) ( 48 -32 968 ) ( 48 -32 976 ) fridge1 -0 -0 180 1 -1
@@ -193,7 +193,8 @@
 // entity 6
 {
 "classname" "func_door_secret"
-"angle" "-2"
+"angle" "0"
+"spawnflags" "4"
 // brush 0
 {
 ( -144 -0 400 ) ( -144 1 400 ) ( -144 -0 401 ) fridge1 0 0 0 1 1
@@ -224,7 +225,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_layer"
 "_tb_name" "shaft"
-"_tb_id" "188"
+"_tb_id" "1"
 // brush 0
 {
 ( -16 -144 128 ) ( -16 -176 256 ) ( -16 -176 128 ) fridge1 -0 -0 -0 1 1
@@ -330,7 +331,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_layer"
 "_tb_name" "shaft2"
-"_tb_id" "189"
+"_tb_id" "2"
 // brush 0
 {
 ( -32 -144 416 ) ( -32 -160 544 ) ( -32 -160 416 ) fridge1 -0 32 -0 1 1
@@ -481,7 +482,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_layer"
 "_tb_name" "shaft3"
-"_tb_id" "190"
+"_tb_id" "3"
 // brush 0
 {
 ( -160 64 704 ) ( -160 -112 704 ) ( -160 -112 688 ) fridge1 -11.6364 -0 -0 0.846154 1
@@ -587,7 +588,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_layer"
 "_tb_name" "top"
-"_tb_id" "191"
+"_tb_id" "4"
 // brush 0
 {
 ( -160 -208 704 ) ( -160 -207 704 ) ( -160 -208 705 ) fridge1 -0 -32 -0 1 1
@@ -721,14 +722,14 @@
 {
 "classname" "item_key2"
 "origin" "-24 -176 912"
-"_tb_layer" "191"
+"_tb_layer" "4"
 }
 // entity 13
 {
 "classname" "func_group"
 "_tb_type" "_tb_layer"
 "_tb_name" "sides"
-"_tb_id" "192"
+"_tb_id" "5"
 // brush 0
 {
 ( -176 -208 -160 ) ( -176 -207 -160 ) ( -176 -208 -159 ) fridge1 0 0 0 1 1
@@ -1149,21 +1150,21 @@
 "classname" "func_group"
 "_tb_type" "_tb_layer"
 "_tb_name" "lights"
-"_tb_id" "193"
+"_tb_id" "6"
 }
 // entity 15
 {
 "classname" "light"
 "origin" "-24 -72 936"
 "mangle" "180 270 90"
-"_tb_layer" "193"
+"_tb_layer" "6"
 }
 // entity 16
 {
 "classname" "light"
 "origin" "-8 -160 520"
 "_color" "0.6 0.545098 1"
-"_tb_layer" "193"
+"_tb_layer" "6"
 }
 // entity 17
 {
@@ -1172,21 +1173,21 @@
 "_color" "1 0.384314 0.827451"
 "light" "300"
 "angle" "-0"
-"_tb_layer" "193"
+"_tb_layer" "6"
 }
 // entity 18
 {
 "classname" "light"
 "origin" "-72 -160 248"
 "_color" "0.6 0.545098 1"
-"_tb_layer" "193"
+"_tb_layer" "6"
 }
 // entity 19
 {
 "classname" "light"
 "origin" "24 -160 -40"
 "_color" "0.6 0.545098 1"
-"_tb_layer" "193"
+"_tb_layer" "6"
 }
 // entity 20
 {
@@ -1194,14 +1195,14 @@
 "origin" "72 -0 904"
 "_color" "0.6 0.545098 1"
 "light" "100"
-"_tb_layer" "193"
+"_tb_layer" "6"
 }
 // entity 21
 {
 "classname" "func_group"
 "_tb_type" "_tb_layer"
 "_tb_name" "moresides"
-"_tb_id" "194"
+"_tb_id" "7"
 // brush 0
 {
 ( -160 -448 -144 ) ( -160 -447 -144 ) ( -160 -448 -143 ) fridge1 -0 -0 -0 1 1
@@ -1434,13 +1435,13 @@
 "classname" "func_group"
 "_tb_type" "_tb_layer"
 "_tb_name" "hurblocks"
-"_tb_id" "195"
+"_tb_id" "8"
 }
 // entity 23
 {
 "classname" "trigger_hurt"
 "dmg" "50"
-"_tb_layer" "195"
+"_tb_layer" "8"
 // brush 0
 {
 ( -32 -136 880 ) ( -32 -135 880 ) ( -32 -136 881 ) trigger 8 48 -0 1 1
@@ -1476,12 +1477,12 @@
 "_color" "0.6 0.545098 1"
 "light" "300"
 "angle" "-0"
-"_tb_layer" "195"
+"_tb_layer" "8"
 }
 // entity 25
 {
 "classname" "light"
 "origin" "80 32 -176"
 "_color" "0.6 0.545098 1"
-"_tb_layer" "195"
+"_tb_layer" "8"
 }
